@@ -7,6 +7,9 @@ def home(requests):
 def about(requests):
     return render(requests, 'about.html')
 
+def experiences(requests):
+    return render(requests, 'experiences.html')
+
 def resume(requests):
     return render(requests, "resume.html")
 

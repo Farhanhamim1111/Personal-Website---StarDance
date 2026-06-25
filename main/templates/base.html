@@ -14,11 +14,18 @@
     <div class = "right_nav">
         <a href = "/">Home</a>
         <a href = "/about">About</a>
+        <a href = "/experiences">Experiences</a>
         <a href = "/resume">Resume</a>
         <a href = "/contact">Contact</a>
+        <button id="toggle_theme" class="toggle_button">Toggle</button>
     </div>
 </nav>
 {% block content %}
 {% endblock %}
+<script>
+    document.getElementById("toggle_theme").onclick = function () {
+        document.body.classList.toggle("dark-mode");
+    };
+</script>
 </body>
 </html>
