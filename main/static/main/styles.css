@@ -89,3 +89,32 @@ body.dark-mode .navbar a:hover{
     color:#00aaff
 }
 
+.social-icon{
+    font-size: 2rem;
+    color: #0a66c2;
+    margin: 0 10px;
+    transition: transform 0.2s ease, color 0.3s ease;
+    text-decoration: none !important;
+}
+
+.social-icon i{
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover{
+    transform: scale(1.2);
+    color: #4da8da;
+}
+
+.social-icon i.fa-github{
+    color: #000;
+}
+
+body.dark-mode .social-icon i.fa-github{
+    color: #eee;
+}
+
+
+.social-icon:hover i.fa-github{
+    color: #4da6da;
+}
