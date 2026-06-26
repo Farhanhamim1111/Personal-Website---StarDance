@@ -1,29 +1,24 @@
 /* light mode */
 
 body {
-    font-family: Arial, sans-serif;
     background: #f5f5f5;
-    padding: 40px;
     margin: 0;
-    padding-top: 20px;
+    padding-top: 80px;
     font-family: 'Inter', sans-serif;
     color: #222;
 }
 
-h1 {
-    color: #333;
-    text-align: center;
-}
-
 .navbar {
-    background: #9b9b9b;
+    background: #333;
     color: white;
     padding: 15px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    width: 95%;
     z-index: 1000;
 }
 
@@ -50,50 +45,47 @@ h1 {
     background: white;
     padding: 30px;
     border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 20px rgba(32, 32, 32, 0.1);
     text-align: center;
-    color: #222;
 }
 
+.toggle_button {
+    background: #222;
+    border: 1px solid #555;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-left: 20px;
+    transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.toggle_button:hover {
+    transform: scale(1.5);
+    color: #00aaff
+}
 /*-------------------- DARK MODE -----------------*/
 
-body .dark-mode{
-    font-family: Arial, sans-serif;
-    background: #111;
-    padding: 40px;
-    margin: 0;
-    padding-top: 20px;
-    font-family: 'Inter', sans-serif;
+body.dark-mode{
+    background: #000f1f;
     color: #eee;
 }
 
 body.dark-mode .navbar {
-    background: #222;
-    color: white;
-    padding: 15px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    background: #000;
 }
 
-body.dark-mode .content-box{
-    max-width: 700px;
-    margin: 40px auto;
+body.dark-mode .content-box{ 
     background: black;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    text-align: center;
     color: #eee;
 }
 
 body.dark-mode .navbar a{
-    color: white;
-    text-decoration: none;
-    margin-left: 25px;
-    font-weight: 500;
-    transition: color 0.3 ease;
+    color: #ddd;
 }
+
+body.dark-mode .navbar a:hover{
+    color:#00aaff
+}
+
