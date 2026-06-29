@@ -25,18 +25,31 @@
 {% block content %}
 {% endblock %}
 <script>
-    /*
-    document.getElementById("toggle_theme").onclick = function () {
-        document.body.classList.toggle("dark-mode");
-    };
-    */
-   const button = document.getElementById("toggle_theme");
+    const button = document.getElementById("toggle_theme");
+    const savedTheme = localStorage.getItem("theme");
+    if(savedTheme == "dark"){
+        document.body.classList.add("dark-mode");
+        button.textContent = "☀️";
+    }
+   
    button.onclick = function () {
         document.body.classList.toggle("dark-mode");
-        button.textContent = document.body.classList.contains("dark-mode")
+        const isDark = document.body.classList.contains("dark-mode"); 
+        button.textContent = isDark 
             ? "☀️"
             : "🌙";
+        localStorage.setItem("theme", isDark ? "dark" : "light");
    };
+</script>
+<script>
+    const observer = new IntersectionObserver((entries) =>{
+        entries.forEach(entry => {
+            if(entry.isIntersecting){
+                entry.target.classList.add("visible");
+            }
+        });
+    }, { threshold: 0.2 });
+    document.querySelectorAll(".scroll-animate").forEach(el => observer.observe(el));
 </script>
 </body>
 </html>
