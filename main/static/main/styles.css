@@ -116,7 +116,7 @@ p {
 }
 
 .resume-box{
-    max-width: 750px;
+    max-width: 760px;
     padding: 20px;
 }
 
@@ -163,6 +163,10 @@ body.dark-mode .social-icon i.fa-github,
 body.dark-mode .social-icon i.fa-Linkedin,
 body.dark-mode .social-icon i.fa-at{
     color: #eee;
+}
+
+body.dark-mode .resume-frame{
+    filter: invert(1) hue-rotate(180deg);
 }
 
 

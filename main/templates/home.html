@@ -1,10 +1,12 @@
 {% extends 'base.html' %} 
 
+{% load static %}
+
 {% block content %}
 <div class = "content-box scroll-animate">
     <h1>Home</h1>
     <p>Welcome to my personal website. My name is Farhan Hamim, and I'm a highschooler at QHSS.</p>
-    <img src="" alt="Working on image">
-    <p></p>
+    <img src="{% static 'main/Portrait_Placeholder.png' %}" alt="Farhan">
+    
 </div>
 {% endblock %}

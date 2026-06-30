@@ -35,9 +35,7 @@
    button.onclick = function () {
         document.body.classList.toggle("dark-mode");
         const isDark = document.body.classList.contains("dark-mode"); 
-        button.textContent = isDark 
-            ? "☀️"
-            : "🌙";
+        button.textContent = isDark ? "☀️" : "🌙";
         localStorage.setItem("theme", isDark ? "dark" : "light");
    };
 </script>
